@@ -1,0 +1,13 @@
+.text{
+    -fx-font-family: "Quicksand";
+    -fx-font-size: 36;
+    -fx-padding: 1,1,1,1;
+    -fx-border-width: 2;
+    -fx-border-radius: 1;
+    -fx-border: gone;
+    -fx-background-color: transparent;
+    -fx-text-fill: grey;
+    -fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, #2072ff 0%, #2ca1ff 50%);
+    -fx-stroke-width: 1;
+
+}

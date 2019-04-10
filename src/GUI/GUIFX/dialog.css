@@ -1,0 +1,12 @@
+.dialog{
+    -fx-background-color: #00adef;
+}
+.dialog > *.button-bar > *.container{
+    -fx-background-color: #00adef;
+}
+.dialog > *.label.content{
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(three-pass-box,rgba(0,0,0,0.4),10,0.0,0,1);
+}

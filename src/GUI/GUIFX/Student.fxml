@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="542.0" prefWidth="767.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.GUIFX.StudentController">
+   <children>
+      <ImageView fitHeight="542.0" fitWidth="767.0">
+         <image>
+            <Image url="@luminfire-mac-os-x-desktop-background-image-2.jpg" />
+         </image>
+      </ImageView>
+      <TabPane fx:id="tabPane" prefHeight="542.0" prefWidth="739.0" stylesheets="@tabPane.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Temele mele">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" stylesheets="@TextStyle.css">
+                     <children>
+                        <TableView fx:id="temaTableView" layoutX="85.0" onMouseClicked="#selectedTema" prefHeight="273.0" prefWidth="630.0" stylesheets="@table2.css" />
+                        <TextArea fx:id="feedbackField" editable="false" layoutX="175.0" layoutY="333.0" prefHeight="111.0" prefWidth="174.0" stylesheets="@textArea.css" />
+                        <TextField fx:id="notaObtinutaField" editable="false" layoutX="222.0" layoutY="292.0" prefHeight="30.0" prefWidth="40.0" stylesheets="@text_field.css" />
+                        <Label fx:id="notaObtinutaText" layoutX="63.0" layoutY="293.0" text="Nota obtinuta" />
+                        <Label layoutX="63.0" layoutY="362.0" text="Feedback" />
+                        <Label layoutX="447.0" layoutY="297.0" text="Media curenta" />
+                        <TextField fx:id="mediaCurenta" editable="false" layoutX="579.0" layoutY="296.0" prefHeight="30.0" prefWidth="40.0" stylesheets="@text_field.css" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Rapoarte generale">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <LineChart fx:id="LineChart" layoutX="59.0" layoutY="111.0" prefHeight="365.0" prefWidth="521.0" stylesheets="@BarChart.css">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="yAxis" side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                        <Label layoutX="103.0" layoutY="39.0" prefHeight="55.0" prefWidth="263.0" stylesheets="@TextStyle.css" text="Progresul meu">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <AnchorPane layoutX="401.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="263.0">
+         <children>
+            <Label fx:id="welcome" alignment="CENTER_RIGHT" layoutX="8.0" layoutY="13.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="250.0" stylesheets="@TextStyle.css" text="Label" />
+            <ImageView layoutX="317.0" layoutY="11.0" mouseTransparent="true">
+               <image>
+                  <Image url="@delete2.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="268.0" layoutY="10.0" mouseTransparent="true">
+               <image>
+                  <Image url="@logout.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="306.0" layoutY="7.0" mnemonicParsing="false" onAction="#close" opacity="0.0" prefHeight="41.0" prefWidth="52.0" text="Button" />
+            <Button layoutX="248.0" layoutY="7.0" mnemonicParsing="false" onAction="#logOut" opacity="0.0" prefHeight="41.0" prefWidth="52.0" text="Button" />
+         </children>
+         <padding>
+            <Insets right="1.0" />
+         </padding>
+      </AnchorPane>
+   </children>
+</AnchorPane>

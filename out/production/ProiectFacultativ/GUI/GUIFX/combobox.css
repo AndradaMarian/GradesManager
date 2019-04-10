@@ -1,0 +1,33 @@
+.combo-box,
+.choice-box {
+    -fx-font-size: 20;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-background-color: #00adef;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #000d33;
+    -fx-padding: 0 0 3 -8;
+}
+
+.combo-box .list-cell:filled:selected .text,
+.choice-box .list-cell:filled:selected .text {
+    -fx-fill: #000d33;
+}
+
+.combo-box .arrow,
+.choice-box .arrow {
+    -fx-background-color: #000d33;
+}
+.combo-box-popup .list-view
+{
+    -fx-background-color: -fx-box-border, -fx-control-inner-background;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 8, 0.0 , 0 , 0 );
+}
+.combo-box-popup .list-view .list-cell
+{
+    -fx-background-color: #00adef;
+    -fx-font-size: 20;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+}
